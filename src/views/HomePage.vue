@@ -31,7 +31,7 @@
         <input 
           class="text-input" 
           id="amount" 
-          type="text"
+          type="number"
           placeholder="0.00"
           autofocus
         />
