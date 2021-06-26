@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "eslint": "eslint --ext .js,.vue src",
+    "eslint:fix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
     "vue": "^3.0.5",
@@ -15,9 +17,14 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.6",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.12.1",
     "miragejs": "^0.1.41",
     "postcss": "^8.3.5",
+    "prettier": "^2.3.1",
     "tailwindcss": "^2.2.4",
-    "vite": "^2.3.8"
+    "vite": "^2.3.8",
+    "vite-plugin-eslint": "^1.2.0"
   }
 }

@@ -26,7 +26,7 @@
           for="amount"  
           class="input-label"
         >
-         Enter amount 
+          Enter amount 
         </label>
         <input 
           class="text-input" 
@@ -38,34 +38,34 @@
       </div>
       <div class="mt-10 flex items-center justify-between">
         <button
-           class="btn btn-blue" 
-           type="button"
-           @click.prevent="submitPayment"
+          class="btn btn-blue" 
+          type="button"
+          @click.prevent="submitPayment"
         >
-         Pay 
+          Pay 
         </button>
       </div>
     </form>
-   </div>
+  </div>
 </template>
 
 <script>
-import { computed } from "vue"
-import { useStore } from "vuex"
-import { useRouter } from "vue-router"
-import AppBar from "/src/components/AppBar.vue"
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+import AppBar from "/src/components/AppBar.vue";
 
 export default {
-  name: "HomePage",
-  components: { AppBar },
-  setup () {
-    const store = useStore();
-    const router = useRouter();
+    name: "HomePage",
+    components: { AppBar },
+    setup () {
+        const store = useStore();
+        const router = useRouter();
 
-    return {
-      contactName: computed(() => store.getters.currentContactFullName),
-      submitPayment: () => router.push("/success"),
+        return {
+            contactName: computed(() => store.getters.currentContactFullName),
+            submitPayment: () => router.push("/success"),
+        };
     }
-  }
-}
+};
 </script>

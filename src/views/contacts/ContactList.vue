@@ -28,26 +28,26 @@
 </template>
 
 <script>
-import { computed } from "vue"
-import { useStore } from "vuex"
-import { useRouter } from "vue-router"
-import AppBar from "/src/components/AppBar.vue"
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+import AppBar from "/src/components/AppBar.vue";
 
 export default {
-  name: "ContactList",
-  components: { AppBar},
-  setup () {
-    const store = useStore();
-    const router = useRouter();
-    store.dispatch("getContactItems");
+    name: "ContactList",
+    components: { AppBar},
+    setup () {
+        const store = useStore();
+        const router = useRouter();
+        store.dispatch("getContactItems");
 
-    return {
-      contacts: computed(() => store.getters.contactItems),
-      setCurrentContact: contact => { 
-         store.commit("UPDATE_CURRENT_CONTACT", contact);
-         router.push("/"); 
-      }
+        return {
+            contacts: computed(() => store.getters.contactItems),
+            setCurrentContact: contact => { 
+                store.commit("UPDATE_CURRENT_CONTACT", contact);
+                router.push("/"); 
+            }
+        };
     }
-  }
-}
+};
 </script>
